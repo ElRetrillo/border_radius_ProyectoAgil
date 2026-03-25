@@ -6,6 +6,7 @@ services:
     container_name: backend
     volumes:
       - ./backend:/app
+      - /app/node_modules
     ports:
       - "5000:5000"
     env_file:
@@ -22,6 +23,7 @@ services:
       - ./frontend:/app
     ports:
       - "3000:3000"
+    command: sh -c "npm install && npm run dev"
     networks:
       - app-net
 
