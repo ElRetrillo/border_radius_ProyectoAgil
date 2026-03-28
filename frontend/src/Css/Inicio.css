@@ -1,0 +1,249 @@
+.inicio-container {
+    background-color: var(--bg-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+    background: var(--navbar-bg);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--navbar-text);
+    box-shadow: var(--shadow);
+    transition: background-color 0.3s ease;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.nav-brand .logo-icono {
+    background: linear-gradient(135deg, #6366f1, #a855f7);
+    width: 35px;
+    height: 35px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.nav-user {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-email {
+    font-size: 0.9rem;
+    color: var(--navbar-secondary);
+    font-weight: 500;
+}
+
+/* Hero Section */
+.hero {
+    padding: 3rem 2rem;
+    background: var(--hero-bg);
+    text-align: center;
+    transition: background 0.3s ease;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+.hero p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+/* Content */
+.content {
+    flex-grow: 1;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.section-container {
+    margin-bottom: 3rem;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--section-border);
+    padding-bottom: 10px;
+}
+
+.section-icon {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.section-header h2 {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+/* Anuncios */
+.grid-anuncios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.anuncio-card {
+    background-color: var(--card-bg) !important;
+    border-radius: 16px !important;
+    border: 1px solid var(--card-border) !important;
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s !important;
+}
+
+.anuncio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1) !important;
+}
+
+.anuncio-card h3 {
+    margin-top: 15px;
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+.anuncio-card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.anuncio-badge {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.anuncio-fecha {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    opacity: 0.7;
+}
+
+/* Ofertas */
+.grid-ofertas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.oferta-card {
+    background: var(--card-bg);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s;
+}
+
+.oferta-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.oferta-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.oferta-overlay {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+.badge-promo {
+    background: var(--accent-color);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+}
+
+.oferta-content {
+    padding: 1.5rem;
+}
+
+.oferta-content h3 {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.oferta-content p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.oferta-precios {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.precio-antiguo {
+    text-decoration: line-through;
+    color: var(--text-secondary);
+    opacity: 0.6;
+    font-size: 0.9rem;
+}
+
+.precio-nuevo {
+    color: #ef4444;
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+
+/* Footer */
+.inicio-footer {
+    padding: 2rem;
+    background: var(--footer-bg);
+    text-align: center;
+    border-top: 1px solid var(--card-border);
+    transition: background-color 0.3s ease;
+}
+
+.inicio-footer p {
+    color: var(--footer-text);
+    font-size: 0.9rem;
+}
+
+.p-button-logout:hover {
+    background: rgba(239, 68, 68, 0.1) !important;
+}
+
+@media (max-width: 768px) {
+
+    .grid-anuncios,
+    .grid-ofertas {
+        grid-template-columns: 1fr;
+    }
+}
