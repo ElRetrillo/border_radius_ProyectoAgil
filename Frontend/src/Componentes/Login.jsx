@@ -27,7 +27,8 @@ function Login() {
 
       const data = await response.json();
       if (data.ok) {
-        console.log("Login exitoso");
+        localStorage.setItem("accessToken", data.token);
+        localStorage.setItem("refreshToken", data.refreshToken);
         navigate("/inicio");
       }else {
         console.log("RUT o contraseña incorrectos");
