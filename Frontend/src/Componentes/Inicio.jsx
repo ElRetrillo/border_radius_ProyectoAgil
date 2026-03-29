@@ -3,29 +3,33 @@ import "../Css/BarraLateral.css";
 
 function Inicio() {
     const [abrirBarra, setAbrirBarra] = useState(false);
+    const [abrirPerfil, setAbrirPerfil] = useState(false);
 
     return (
         <div className="inicio">
             <header className="headerBarraLateral">
                 <div className="izquierda">
                     <button className="botonMenu" onClick={() => setAbrirBarra(!abrirBarra)}> 
-                        <span></span>
-                        <span></span>
-                        <span></span>
+                        <i className="pi pi-bars" style={{ fontSize: "1.25rem" }}></i>
+                        <p style={{color:"#ebebeb"}}>Servidores</p>
                     </button>
                 </div>
 
                 <div className="derecha">
-                    <p className="usuario">Usuario</p>
+                    <button className={`botonPerfil ${abrirPerfil ? "activo" : ""}`} onClick={() => setAbrirPerfil(!abrirPerfil)}> 
+                        <i className="pi pi-user" style={{ fontSize: "1.5rem" }}></i>
+                        <p style={{color:"#ebebeb"}}>Perfil</p>
+                    </button>
                 </div>
             </header>
 
             <div className={`barra-lateral ${abrirBarra ? "activa" : ""}`}>
                 <h2>Canales</h2>
                 <ul>
-                    <li>Opción 1</li>
-                    <li>Opción 2</li>
-                    <li>Opción 3</li>
+                    <li>Ingeniería de Software</li>
+                    <li>Calculo II</li>
+                    <li>Álgebra I</li>
+                    <li>POO</li>
                 </ul>
             </div>
         </div>
