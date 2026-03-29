@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+:root {
+    --background-color:white;
+    --text-title-color: #075386;
+    --text-color:#32363B;
+    --menu-color:#707780;
+
+    --text-selected-color:#355CC0;
+    --background-selected: #EBF0FF;
+    --background-hover:#586368;
+
+    
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+
+.headerBarraLateral {
+    border: none;
+    z-index: 200;
+    width: 100%;
+    background-color: var(--background-color);
+    display:flex;
+    justify-content: space-between;
+    padding: 0.45rem 2rem 0.45rem 1.27rem;
+    position: fixed;
+    background-color: var(--background-color);
+    top:0;
+    left:0;
+
+
+}
+
+.usuario {
+    font-weight: 600;
+    color:var(--text-color);
+}
+
+.izquierda {
+    border: none;
+}
+
+.derecha {
+    border: none;
+}
+
+.barra-lateral {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: white;
+    transition: left 0.3s ease;
+    z-index: 100;
+    padding: 5rem 1.2rem 1rem;
+    box-shadow: 4px 0 15px rgba(0,0,0,0.08);
+}
+
+.barra-lateral.activa {
+    left: 0;
+}
+
+.barra-lateral h2 {
+    margin-bottom: 1rem;
+    color: var(--text-title-color);
+}
+
+.barra-lateral ul {
+    list-style: none;
+}
+
+.barra-lateral li {
+    padding: 0.7rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.barra-lateral li:hover {
+    background: var(--background-hover);
+}
+
+.barra-lateral.activa {
+    left: 0;
+}
+
+.botonMenu {
+    width: 30px;
+    height: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.botonMenu span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: var(--menu-color);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.botonMenu.activo span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.botonMenu.activo span:nth-child(2) {
+    opacity: 0;
+}
+
+.botonMenu.activo span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
