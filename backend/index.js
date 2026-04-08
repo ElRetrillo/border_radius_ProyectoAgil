@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const express = require("express");
 const cors = require("cors");
 const bcrypt = require("bcrypt");
@@ -7,8 +9,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const secretKey = "clave_secreta";
-const refreshSecretKey = "clave_secreta_refresh";
+const secretKey = process.env.secretKey;
+const refreshSecretKey = process.env.refreshSecretKey;
 
 const usuarios = [
     {
